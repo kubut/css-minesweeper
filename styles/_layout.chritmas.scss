@@ -1,0 +1,23 @@
+#christmas:checked ~ .wrapper {
+  background: url('../img/christmas/bg.jpg') no-repeat;
+  background-size: cover;
+
+  .board, .board-mines{
+    width: 290px;
+  }
+
+  label.field{
+    border: none;
+    margin: 4px;
+  }
+
+  label.field {
+    background: url('../img/christmas/field.png') no-repeat;
+    background-size: cover;
+  }
+
+  label.action-type {
+    border: 1px solid #550900;
+    @include background(radial-gradient(#EA6165, #a30911));
+  }
+}

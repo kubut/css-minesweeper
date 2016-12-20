@@ -1,0 +1,60 @@
+$fieldsPerRow: 5;
+$fields: 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1;
+//$fields: 1,0,0,0,1,0,0,1,0,0;
+$minesAround: ();
+$minesCount: 0;
+
+@each $field in $fields {
+  @if $field == 1 { $minesCount: $minesCount + 1 }
+}
+
+@function neighborExists($field, $direction) {
+  @if $direction == 'up' {
+    @return $field - $fieldsPerRow > 0
+  }
+
+  @if $direction == 'down' {
+    @return $field + $fieldsPerRow <= length($fields)
+  }
+
+  @if $direction == 'right' {
+    @return $field % $fieldsPerRow != 0
+  }
+
+  @if $direction == 'left' {
+    @return $field % $fieldsPerRow != 1
+  }
+}
+
+@function hasMine($field) {
+  @return nth($fields, $field) == 1
+}
+
+@for $i from 1 through length($fields) {
+  $mines: 0;
+  @if neighborExists($i, 'up') and hasMine($i - $fieldsPerRow) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'down') and hasMine($i + $fieldsPerRow) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'right') and hasMine($i + 1) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'left') and hasMine($i - 1) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'left') and neighborExists($i - 1, 'up') and hasMine($i - 1 - $fieldsPerRow) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'right') and neighborExists($i + 1, 'up') and hasMine($i + 1 - $fieldsPerRow) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'left') and neighborExists($i - 1, 'down') and hasMine($i - 1 + $fieldsPerRow) {
+    $mines: $mines + 1;
+  }
+  @if neighborExists($i, 'right') and neighborExists($i + 1, 'down') and hasMine($i + 1 + $fieldsPerRow ) {
+    $mines: $mines + 1;
+  }
+  $minesAround: append($minesAround, $mines, comma)
+}

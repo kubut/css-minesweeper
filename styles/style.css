@@ -1,0 +1,1030 @@
+body {
+  counter-reset: minesCount fieldsCount; }
+
+.board #mark:checked ~ label.field {
+  pointer-events: none; }
+.board input[data-info~="mine"]:checked ~ .loser-screen {
+  visibility: visible;
+  z-index: 10; }
+.board .board-mines {
+  visibility: hidden;
+  margin-top: 0; }
+  .board .board-mines label {
+    visibility: hidden; }
+    #mark:checked ~ .board .board-mines label {
+      visibility: visible; }
+    #dig:checked ~ .board .board-mines label {
+      pointer-events: none; }
+.board .game-stats .fields:after {
+  content: "Digged fields: " counter(fieldsCount) "/14"; }
+.board .game-stats .mines:after {
+  content: "Marked mines: " counter(minesCount) "/11"; }
+
+#mine-field0:checked ~ .board-mines #mine-label0 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field0:checked ~ #label0 {
+  pointer-events: none; }
+
+#field0:checked ~ .board-mines #mine-label0 {
+  pointer-events: none; }
+
+#field0:checked ~ #label0 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field1:checked ~ .board-mines #mine-label1 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field1:checked ~ #label1 {
+  pointer-events: none; }
+
+#field1:checked ~ .board-mines #mine-label1 {
+  pointer-events: none; }
+
+#field1:checked ~ #label1 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field2:checked ~ .board-mines #mine-label2 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field2:checked ~ #label2 {
+  pointer-events: none; }
+
+#field2:checked ~ .board-mines #mine-label2 {
+  pointer-events: none; }
+
+#field2:checked ~ #label2 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field3:checked ~ .board-mines #mine-label3 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field3:checked ~ #label3 {
+  pointer-events: none; }
+
+#field3:checked ~ .board-mines #mine-label3 {
+  pointer-events: none; }
+
+#field3:checked ~ #label3 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field4:checked ~ .board-mines #mine-label4 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field4:checked ~ #label4 {
+  pointer-events: none; }
+
+#field4:checked ~ .board-mines #mine-label4 {
+  pointer-events: none; }
+
+#field4:checked ~ #label4 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field5:checked ~ .board-mines #mine-label5 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field5:checked ~ #label5 {
+  pointer-events: none; }
+
+#field5:checked ~ .board-mines #mine-label5 {
+  pointer-events: none; }
+
+#field5:checked ~ #label5 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field6:checked ~ .board-mines #mine-label6 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field6:checked ~ #label6 {
+  pointer-events: none; }
+
+#field6:checked ~ .board-mines #mine-label6 {
+  pointer-events: none; }
+
+#field6:checked ~ #label6 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field7:checked ~ .board-mines #mine-label7 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field7:checked ~ #label7 {
+  pointer-events: none; }
+
+#field7:checked ~ .board-mines #mine-label7 {
+  pointer-events: none; }
+
+#field7:checked ~ #label7 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field8:checked ~ .board-mines #mine-label8 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field8:checked ~ #label8 {
+  pointer-events: none; }
+
+#field8:checked ~ .board-mines #mine-label8 {
+  pointer-events: none; }
+
+#field8:checked ~ #label8 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field9:checked ~ .board-mines #mine-label9 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field9:checked ~ #label9 {
+  pointer-events: none; }
+
+#field9:checked ~ .board-mines #mine-label9 {
+  pointer-events: none; }
+
+#field9:checked ~ #label9 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field10:checked ~ .board-mines #mine-label10 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field10:checked ~ #label10 {
+  pointer-events: none; }
+
+#field10:checked ~ .board-mines #mine-label10 {
+  pointer-events: none; }
+
+#field10:checked ~ #label10 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field11:checked ~ .board-mines #mine-label11 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field11:checked ~ #label11 {
+  pointer-events: none; }
+
+#field11:checked ~ .board-mines #mine-label11 {
+  pointer-events: none; }
+
+#field11:checked ~ #label11 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field12:checked ~ .board-mines #mine-label12 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field12:checked ~ #label12 {
+  pointer-events: none; }
+
+#field12:checked ~ .board-mines #mine-label12 {
+  pointer-events: none; }
+
+#field12:checked ~ #label12 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field13:checked ~ .board-mines #mine-label13 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field13:checked ~ #label13 {
+  pointer-events: none; }
+
+#field13:checked ~ .board-mines #mine-label13 {
+  pointer-events: none; }
+
+#field13:checked ~ #label13 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field14:checked ~ .board-mines #mine-label14 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field14:checked ~ #label14 {
+  pointer-events: none; }
+
+#field14:checked ~ .board-mines #mine-label14 {
+  pointer-events: none; }
+
+#field14:checked ~ #label14 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field15:checked ~ .board-mines #mine-label15 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field15:checked ~ #label15 {
+  pointer-events: none; }
+
+#field15:checked ~ .board-mines #mine-label15 {
+  pointer-events: none; }
+
+#field15:checked ~ #label15 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field16:checked ~ .board-mines #mine-label16 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field16:checked ~ #label16 {
+  pointer-events: none; }
+
+#field16:checked ~ .board-mines #mine-label16 {
+  pointer-events: none; }
+
+#field16:checked ~ #label16 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field17:checked ~ .board-mines #mine-label17 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field17:checked ~ #label17 {
+  pointer-events: none; }
+
+#field17:checked ~ .board-mines #mine-label17 {
+  pointer-events: none; }
+
+#field17:checked ~ #label17 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field18:checked ~ .board-mines #mine-label18 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field18:checked ~ #label18 {
+  pointer-events: none; }
+
+#field18:checked ~ .board-mines #mine-label18 {
+  pointer-events: none; }
+
+#field18:checked ~ #label18 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field19:checked ~ .board-mines #mine-label19 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field19:checked ~ #label19 {
+  pointer-events: none; }
+
+#field19:checked ~ .board-mines #mine-label19 {
+  pointer-events: none; }
+
+#field19:checked ~ #label19 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field20:checked ~ .board-mines #mine-label20 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field20:checked ~ #label20 {
+  pointer-events: none; }
+
+#field20:checked ~ .board-mines #mine-label20 {
+  pointer-events: none; }
+
+#field20:checked ~ #label20 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field21:checked ~ .board-mines #mine-label21 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field21:checked ~ #label21 {
+  pointer-events: none; }
+
+#field21:checked ~ .board-mines #mine-label21 {
+  pointer-events: none; }
+
+#field21:checked ~ #label21 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field22:checked ~ .board-mines #mine-label22 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field22:checked ~ #label22 {
+  pointer-events: none; }
+
+#field22:checked ~ .board-mines #mine-label22 {
+  pointer-events: none; }
+
+#field22:checked ~ #label22 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field23:checked ~ .board-mines #mine-label23 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field23:checked ~ #label23 {
+  pointer-events: none; }
+
+#field23:checked ~ .board-mines #mine-label23 {
+  pointer-events: none; }
+
+#field23:checked ~ #label23 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#mine-field24:checked ~ .board-mines #mine-label24 {
+  visibility: visible;
+  counter-increment: minesCount; }
+
+#mine-field24:checked ~ #label24 {
+  pointer-events: none; }
+
+#field24:checked ~ .board-mines #mine-label24 {
+  pointer-events: none; }
+
+#field24:checked ~ #label24 {
+  pointer-events: none;
+  z-index: 5;
+  counter-increment: fieldsCount; }
+
+#field1:checked ~ #field2:checked ~ #field3:checked ~ #field5:checked ~ #field6:checked ~ #field8:checked ~ #field9:checked ~ #field12:checked ~ #field13:checked ~ #field15:checked ~ #field16:checked ~ #field18:checked ~ #field20:checked ~ #field21:checked ~ .winner-screen {
+  visibility: visible;
+  z-index: 10; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+  background: #2b3242; }
+
+.game {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center; }
+
+.board-mines {
+  top: 0; }
+
+input.action-type {
+  display: none; }
+
+label.action-type {
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 80px;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+  background: -webkit-radial-gradient(#80D5FD, #6AA3E6);
+  background: radial-gradient(#80D5FD, #6AA3E6); }
+  label.action-type:hover {
+    opacity: 0.8; }
+
+#dig + label {
+  border-radius: 20px 0 0 20px; }
+#dig:checked + label {
+  font-weight: bold;
+  opacity: 1; }
+
+#mark + label {
+  border-radius: 0 20px 20px 0; }
+#mark:checked + label {
+  font-weight: bold;
+  opacity: 1; }
+
+label.field {
+  background: -webkit-radial-gradient(#80D5FD, #6AA3E6);
+  background: radial-gradient(#80D5FD, #6AA3E6); }
+
+.game-stats {
+  text-align: left;
+  font-size: 12px;
+  color: white; }
+
+.board, .board-mines {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0; }
+  .board input.field, .board-mines input.field {
+    display: none; }
+  .board label.field, .board-mines label.field {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer; }
+
+.loser-screen, .winner-screen {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0; }
+  .loser-screen button, .winner-screen button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 20px; }
+
+.winner-screen {
+  background: rgba(0, 255, 0, 0.7); }
+  .winner-screen button {
+    color: black; }
+
+.layout-change {
+  position: absolute;
+  font-size: 30px; }
+
+label.layout-change {
+  left: 20px;
+  color: white;
+  cursor: pointer; }
+
+input.layout-change {
+  top: 15px; }
+
+#field0:checked ~ #label0 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field0:checked ~ #label0[data-info~="yay"]:after {
+    content: "0"; }
+  #field0:checked ~ #label0[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field0:checked ~ .board-mines #mine-label0 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field0:checked ~ .board-mines #mine-label0:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field1:checked ~ #label1 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field1:checked ~ #label1[data-info~="yay"]:after {
+    content: "2"; }
+  #field1:checked ~ #label1[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field1:checked ~ .board-mines #mine-label1 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field1:checked ~ .board-mines #mine-label1:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field2:checked ~ #label2 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field2:checked ~ #label2[data-info~="yay"]:after {
+    content: "1"; }
+  #field2:checked ~ #label2[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field2:checked ~ .board-mines #mine-label2 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field2:checked ~ .board-mines #mine-label2:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field3:checked ~ #label3 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field3:checked ~ #label3[data-info~="yay"]:after {
+    content: "2"; }
+  #field3:checked ~ #label3[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field3:checked ~ .board-mines #mine-label3 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field3:checked ~ .board-mines #mine-label3:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field4:checked ~ #label4 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field4:checked ~ #label4[data-info~="yay"]:after {
+    content: "0"; }
+  #field4:checked ~ #label4[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field4:checked ~ .board-mines #mine-label4 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field4:checked ~ .board-mines #mine-label4:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field5:checked ~ #label5 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field5:checked ~ #label5[data-info~="yay"]:after {
+    content: "3"; }
+  #field5:checked ~ #label5[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field5:checked ~ .board-mines #mine-label5 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field5:checked ~ .board-mines #mine-label5:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field6:checked ~ #label6 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field6:checked ~ #label6[data-info~="yay"]:after {
+    content: "4"; }
+  #field6:checked ~ #label6[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field6:checked ~ .board-mines #mine-label6 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field6:checked ~ .board-mines #mine-label6:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field7:checked ~ #label7 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field7:checked ~ #label7[data-info~="yay"]:after {
+    content: "1"; }
+  #field7:checked ~ #label7[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field7:checked ~ .board-mines #mine-label7 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field7:checked ~ .board-mines #mine-label7:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field8:checked ~ #label8 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field8:checked ~ #label8[data-info~="yay"]:after {
+    content: "3"; }
+  #field8:checked ~ #label8[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field8:checked ~ .board-mines #mine-label8 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field8:checked ~ .board-mines #mine-label8:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field9:checked ~ #label9 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field9:checked ~ #label9[data-info~="yay"]:after {
+    content: "2"; }
+  #field9:checked ~ #label9[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field9:checked ~ .board-mines #mine-label9 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field9:checked ~ .board-mines #mine-label9:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field10:checked ~ #label10 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field10:checked ~ #label10[data-info~="yay"]:after {
+    content: "1"; }
+  #field10:checked ~ #label10[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field10:checked ~ .board-mines #mine-label10 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field10:checked ~ .board-mines #mine-label10:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field11:checked ~ #label11 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field11:checked ~ #label11[data-info~="yay"]:after {
+    content: "3"; }
+  #field11:checked ~ #label11[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field11:checked ~ .board-mines #mine-label11 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field11:checked ~ .board-mines #mine-label11:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field12:checked ~ #label12 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field12:checked ~ #label12[data-info~="yay"]:after {
+    content: "3"; }
+  #field12:checked ~ #label12[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field12:checked ~ .board-mines #mine-label12 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field12:checked ~ .board-mines #mine-label12:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field13:checked ~ #label13 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field13:checked ~ #label13[data-info~="yay"]:after {
+    content: "4"; }
+  #field13:checked ~ #label13[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field13:checked ~ .board-mines #mine-label13 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field13:checked ~ .board-mines #mine-label13:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field14:checked ~ #label14 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field14:checked ~ #label14[data-info~="yay"]:after {
+    content: "1"; }
+  #field14:checked ~ #label14[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field14:checked ~ .board-mines #mine-label14 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field14:checked ~ .board-mines #mine-label14:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field15:checked ~ #label15 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field15:checked ~ #label15[data-info~="yay"]:after {
+    content: "2"; }
+  #field15:checked ~ #label15[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field15:checked ~ .board-mines #mine-label15 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field15:checked ~ .board-mines #mine-label15:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field16:checked ~ #label16 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field16:checked ~ #label16[data-info~="yay"]:after {
+    content: "4"; }
+  #field16:checked ~ #label16[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field16:checked ~ .board-mines #mine-label16 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field16:checked ~ .board-mines #mine-label16:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field17:checked ~ #label17 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field17:checked ~ #label17[data-info~="yay"]:after {
+    content: "3"; }
+  #field17:checked ~ #label17[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field17:checked ~ .board-mines #mine-label17 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field17:checked ~ .board-mines #mine-label17:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field18:checked ~ #label18 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field18:checked ~ #label18[data-info~="yay"]:after {
+    content: "6"; }
+  #field18:checked ~ #label18[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field18:checked ~ .board-mines #mine-label18 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field18:checked ~ .board-mines #mine-label18:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field19:checked ~ #label19 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field19:checked ~ #label19[data-info~="yay"]:after {
+    content: "3"; }
+  #field19:checked ~ #label19[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field19:checked ~ .board-mines #mine-label19 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field19:checked ~ .board-mines #mine-label19:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field20:checked ~ #label20 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field20:checked ~ #label20[data-info~="yay"]:after {
+    content: "0"; }
+  #field20:checked ~ #label20[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field20:checked ~ .board-mines #mine-label20 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field20:checked ~ .board-mines #mine-label20:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field21:checked ~ #label21 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field21:checked ~ #label21[data-info~="yay"]:after {
+    content: "2"; }
+  #field21:checked ~ #label21[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field21:checked ~ .board-mines #mine-label21 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field21:checked ~ .board-mines #mine-label21:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field22:checked ~ #label22 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field22:checked ~ #label22[data-info~="yay"]:after {
+    content: "2"; }
+  #field22:checked ~ #label22[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field22:checked ~ .board-mines #mine-label22 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field22:checked ~ .board-mines #mine-label22:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field23:checked ~ #label23 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field23:checked ~ #label23[data-info~="yay"]:after {
+    content: "4"; }
+  #field23:checked ~ #label23[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field23:checked ~ .board-mines #mine-label23 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field23:checked ~ .board-mines #mine-label23:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#field24:checked ~ #label24 {
+  background: -webkit-radial-gradient(#FFFFFF, #C2C3C5);
+  background: radial-gradient(#FFFFFF, #C2C3C5);
+  line-height: 50px;
+  color: #748F28; }
+  #field24:checked ~ #label24[data-info~="yay"]:after {
+    content: "2"; }
+  #field24:checked ~ #label24[data-info~="mine"] {
+    background: -webkit-radial-gradient(#d50004, #c50900);
+    background: radial-gradient(#d50004, #c50900); }
+
+#mine-field24:checked ~ .board-mines #mine-label24 {
+  background: -webkit-radial-gradient(#FBDD42, #E7C04B);
+  background: radial-gradient(#FBDD42, #E7C04B);
+  line-height: 50px;
+  color: red; }
+  #mine-field24:checked ~ .board-mines #mine-label24:after {
+    font-family: FontAwesome;
+    content: '\f1e2'; }
+
+#christmas:checked ~ .wrapper {
+  background: url("../img/christmas/bg.jpg") no-repeat;
+  background-size: cover; }
+  #christmas:checked ~ .wrapper .board, #christmas:checked ~ .wrapper .board-mines {
+    width: 290px; }
+  #christmas:checked ~ .wrapper label.field {
+    border: none;
+    margin: 4px; }
+  #christmas:checked ~ .wrapper label.field {
+    background: url("../img/christmas/field.png") no-repeat;
+    background-size: cover; }
+  #christmas:checked ~ .wrapper label.action-type {
+    border: 1px solid #550900;
+    background: -webkit-radial-gradient(#EA6165, #a30911);
+    background: radial-gradient(#EA6165, #a30911); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+  background: #2b3242;
+}
+
+.game {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.board-mines {
+  top: 0
+}
+
+input.action-type {
+  display: none
+}
+
+label.action-type {
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 80px;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+  @include background(radial-gradient(#80D5FD, #6AA3E6));
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#dig{
+  & + label {
+    border-radius: 20px 0 0 20px;
+  }
+  &:checked + label {
+    font-weight: bold;
+    opacity: 1;
+  }
+}
+
+#mark{
+  & + label {
+    border-radius: 0 20px 20px 0
+  }
+  &:checked + label {
+    font-weight: bold;
+    opacity: 1;
+  }
+}
+
+label.field{
+  @include background(radial-gradient(#80D5FD, #6AA3E6));
+}
+
+.game-stats {
+  text-align: left;
+  font-size: 12px;
+  color: white;
+}
+
+.board, .board-mines {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  input.field {
+    display: none;
+  }
+
+  label.field {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.loser-screen, .winner-screen {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+
+  button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.winner-screen {
+  background: rgba(0, 255, 0, 0.7);
+
+  button {
+    color: black;
+  }
+}
+
+.layout-change {
+  position: absolute;
+  font-size: 30px;
+}
+
+label.layout-change {
+  left: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+input.layout-change {
+  top: 15px;
+}
+
+@for $i from 0 through length($fields)-1 {
+  #field#{$i}:checked ~ #label#{$i} {
+    @include background(radial-gradient(#FFFFFF, #C2C3C5));
+    line-height: 50px;
+    color: #748F28;
+
+    &[data-info~="yay"] {
+      &:after {
+        content: '' + nth($minesAround, $i+1)
+      }
+    }
+
+    &[data-info~="mine"] {
+      @include background(radial-gradient(#d50004, #c50900))
+    }
+  }
+
+  #mine-field#{$i}:checked ~ .board-mines #mine-label#{$i} {
+    @include background(radial-gradient(#FBDD42, #E7C04B));
+    line-height: 50px;
+    color: red;
+
+    &:after {
+      font-family: FontAwesome;
+      content: '\f1e2';
+    }
+  }
+}

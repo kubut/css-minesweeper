@@ -1,0 +1,75 @@
+body {
+  counter-reset: minesCount fieldsCount;
+}
+
+.board {
+  #mark:checked ~ label.field {
+    pointer-events: none;
+  }
+
+  input[data-info~="mine"]:checked ~ .loser-screen{
+    visibility: visible;
+    z-index: 10;
+  }
+
+  .board-mines {
+    visibility: hidden;
+    margin-top: 0;
+
+    label {
+      visibility: hidden;
+
+      #mark:checked ~ & {
+        visibility: visible;
+      }
+
+      #dig:checked ~ & {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .game-stats{
+    .fields {
+      &:after {
+        content: 'Digged fields: ' counter(fieldsCount) '/' + (length($fields) - $minesCount)
+      }
+    }
+    .mines {
+      &:after {
+        content: 'Marked mines: ' counter(minesCount) '/' + $minesCount
+      }
+    }
+  }
+}
+
+$yayList: ();
+@for $i from 0 through length($fields)-1 {
+  #mine-field#{$i}:checked ~ .board-mines #mine-label#{$i} {
+    visibility: visible;
+    counter-increment: minesCount
+  }
+
+  #mine-field#{$i}:checked ~ #label#{$i} {
+    pointer-events: none;
+  }
+
+  #field#{$i}:checked ~ .board-mines #mine-label#{$i} {
+    pointer-events: none;
+  }
+
+  #field#{$i}:checked ~ #label#{$i} {
+    pointer-events: none;
+    z-index: 5;
+    counter-increment: fieldsCount
+  }
+
+  @if nth($fields, $i+1) == 0{
+    $yayList: append($yayList, unquote('#field#{$i}:checked ~ '), space);
+  }
+}
+
+#{$yayList} .winner-screen {
+  visibility: visible;
+  z-index: 10;
+}
